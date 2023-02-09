@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivityPersonInfo"
     android:padding="16dp"
+
   >
 
     <TextView
@@ -14,7 +15,9 @@
         android:layout_height="wrap_content"
         android:text="Тут буде інформація про "
         tools:ignore="MissingConstraints"
-        android:textSize="32dp"/>
+        android:textSize="32dp"
+        style="@style/Text"
+        />
 
     <TextView
         android:id="@+id/date"
@@ -25,7 +28,9 @@
         android:textSize="28dp"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="16dp"
+        style="@style/Text"
+        />
 
     <TextView
         android:id="@+id/desc"
@@ -36,6 +41,8 @@
         android:textSize="20dp"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="16dp"
+        style="@style/Text"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

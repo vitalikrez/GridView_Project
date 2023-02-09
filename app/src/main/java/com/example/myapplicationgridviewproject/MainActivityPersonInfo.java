@@ -1,11 +1,14 @@
 package com.example.myapplicationgridviewproject;
 
-import static com.example.myapplicationgridviewproject.MainActivity.persons;
+import static com.example.myapplicationgridviewproject.Person.persons;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 public class MainActivityPersonInfo extends AppCompatActivity {
@@ -23,6 +26,7 @@ public class MainActivityPersonInfo extends AppCompatActivity {
         textInfo = findViewById(R.id.info);
         textInfo.setText(textInfo.getText() + " " + persons[position].name);
 
+
         textDate = findViewById(R.id.date);
         textDate.setText(textDate.getText() + " " + persons[position].dateOfName);
 
@@ -31,6 +35,12 @@ public class MainActivityPersonInfo extends AppCompatActivity {
 
 
 
+        Animation animRotateIn_icon = AnimationUtils.loadAnimation(this,
+                R.anim.rotate);
+
+        textInfo.startAnimation(animRotateIn_icon);
+        textDate.startAnimation(animRotateIn_icon);
+        textDesc.startAnimation(animRotateIn_icon);
 
     }
 }
